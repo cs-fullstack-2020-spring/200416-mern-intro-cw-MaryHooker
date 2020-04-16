@@ -11,6 +11,7 @@ class AppContainer extends Component {
         }
     }
 
+    //when component mounts run load data function
     componentDidMount = () =>{
         //     this.state.characterArray.push(
         //     {
@@ -29,8 +30,22 @@ class AppContainer extends Component {
         // )
         //     //reset array globally
         // this.setState({characterArray : this.state.characterArray});
+        this.loadData();
     }
 
+    //fetch documents from database
+    loadData = async () =>{
+        let response = await fetch('/api');
+        //sanity
+        console.log(response);
+        let json = await response.json();
+        //sanity
+        console.table(json);
+        //place imported json in array
+        this.setState({characterArray:json})
+    }
+
+    //handle inputs in form to upate in state
     handleInputs = (event) =>{
         if(event.target.name==='name'){
             this.setState({characterName:event.target.value})
@@ -41,10 +56,30 @@ class AppContainer extends Component {
         }
     }
 
-    handleSubmission = (event) =>{
+    //handle submission in form//make asyncronous
+    handleSubmission = async (event) =>{
         event.preventDefault();
 
-        console.log(this.state)
+        //what allows us to send json data
+        let formData = {
+            characterName: this.state.characterName,
+            characterGender: this.state.characterGender,
+            characterAge: this.state.characterAge,
+        }
+        let response = await fetch('/api', {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(formData)
+        })
+        let json = await response.json();
+        //sanity
+        console.log(json);
+
+
+        // console.log(this.state)
     }
 
 

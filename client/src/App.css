@@ -5,3 +5,7 @@ body{
   font-size: 30px;
   font-family: serif;
 }
+
+hr{
+  border: 1px solid rgb(97, 26, 97);
+}
