@@ -5,11 +5,11 @@ class AppContainer extends Component {
         super(props);
         this.state = {  }
     }
-    
+
     render() { 
         return ( 
             <div>
-                <h1>20-04-16 MERN CW</h1>
+                <h1>Simple Mern Application</h1>
             </div>
          );
     }
