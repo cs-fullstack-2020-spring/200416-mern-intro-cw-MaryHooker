@@ -9,3 +9,31 @@ body{
 hr{
   border: 1px solid rgb(97, 26, 97);
 }
+
+input{
+  height: 24px;
+  background-color: rgb(229, 155, 229);
+  color: rgb(97, 26, 97);
+  border: 2px solid rgb(97, 26, 97);
+  border-radius: 4%;
+  font-size: 18px;
+  padding: 1%;
+}
+
+button{
+  background-color: rgb(97, 26, 97);
+  color: rgb(229, 155, 229);
+  border: rgb(97, 26, 97);
+  border-radius: 4%;
+  padding: 1%;
+  height: 43px;
+  font-size: 24px;
+  font-family: serif;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: rgb(62, 64, 206);
+  color: rgb(229, 155, 229);
+  border: 2px solid rgb(51, 53, 184);
+}
