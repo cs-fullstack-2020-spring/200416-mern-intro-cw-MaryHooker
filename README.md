@@ -1,5 +1,9 @@
 # 20-04-16 MERN Intro CW - Create and Read All
 
+### Love that you added some styling. Works great, and nice comments. Happy to see that you kept with the code a little test a little practice. Would have liked to see you use a dropdown for the gender field. Overall, great work!
+
+### Score : 5/5
+
 ### File Structure + Set Up
 - Create a directory called `server` - this is where our server will be 
 - Create a react app called `client` - this is where our react app will be
