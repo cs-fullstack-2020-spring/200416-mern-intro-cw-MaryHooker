@@ -20,6 +20,15 @@ input{
   padding: 1%;
 }
 
+select{
+  height: 40px;
+  background-color: rgb(229, 155, 229);
+  color: rgb(97, 26, 97);
+  border: 2px solid rgb(97, 26, 97);
+  border-radius: 4%;
+  font-size: 18px;
+  padding: 1%;
+}
 button{
   background-color: rgb(97, 26, 97);
   color: rgb(229, 155, 229);
